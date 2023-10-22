@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeNav"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/job_nav"
+        android:icon="@drawable/jib"
+        android:title="Job" />
+
+    <item
+        android:id="@+id/profileNav"
+        android:icon="@drawable/ppmenu"
+        android:title="Profile" />
+</menu>

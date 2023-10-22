@@ -1,0 +1,62 @@
+<resources>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Prefer Not to Say</item>
+        <item>Cat</item>
+        <item>Apache Attack Helicopter</item>
+        <item>Others</item>
+    </string-array>
+    <string name="labelName1">Dasboard</string>
+    <string name="jobdesc">An Android Developer is a professional in software development who has specialized knowledge and skills in creating mobile applications for the Android platform. They are responsible for designing, developing, testing, and supporting Android applications that can be accessed by users via smartphone and tablet devices. The role of an Android Developer is very important in creating a good user experience and contributing to the success of the application.\n \n
+    Main responsibility:\n\n
+    1. Android Application Development: Design, develop and maintain responsive and efficient Android applications. This involves programming in Kotlin or Java, user interface (UI) design, and interaction with APIs and data sources.\n\n
+
+2. Performance Optimization: Ensures the application runs well and has optimal performance on various Android devices. This includes memory management, response speed, and error handling.\n\n
+
+3. Testing and Debugging: Conduct thorough application testing to identify and fix bugs, and ensure the application functions as expected.\n\n
+
+4. Maintenance and Updates: Perform regular maintenance and updates on the application to ensure security, compatibility and the latest features.\n\n
+
+5. API Integration: Integrate applications with various external services and APIs, such as third-party services, hardware, and data sources.\n\n
+
+6. Application Security: Ensure application security by implementing security best practices, such as data encryption, user authentication, and protection against security threats.\n\n
+
+7. User Experience (UX) Optimization: Designing user-friendly and engaging user interfaces by considering UX principles and responsive design.\n\n
+
+8. Team Collaboration: Work together with other development teams, such as UI/UX designers, backend developers, and project managers, to achieve project goals.\n\n
+
+    Required Qualifications and Skills:\n\n
+
+    Bachelors degree in a related field or comparable experience.\n\n
+Proficiency in Kotlin and/or Java programming languages.\n\n
+Experience in Android application development.\n\n
+Skills in user interface (UI) and user experience (UX) design.\n\n
+Knowledge of quality application development, including memory management and troubleshooting.\n\n
+Communication skills and ability to work in a team.\n\n
+Performance optimization and application security skills.\n\n</string>
+    <string name="labelName2">Profile</string>
+    <string name="app_name">LinkedOut</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="suruhbuat">Not yet registered? SignUp Now</string>
+    <string name="atau">Or Login with:</string>
+    <string name="password">Password</string>
+    <string name="Google">gugel</string>
+    <string name="Facebook">pesbuk</string>
+    <string name="discord">discord</string>
+    <string name="signin">Sign In</string>
+    <string name="emailFill">Your E- Mail</string>
+    <string name="userFill">Your Username</string>
+    <string name="passFill">Your Password</string>
+    <string name="rePass">Re-type Your Password</string>
+    <string name="udahPunya">Already Have an Account? Login</string>
+    <string name="job_success">Job Success</string>
+    <string name="ui_ux_designer">UI/UX Designer</string>
+    <string name="my_desc">Masi Pemula.</string>
+    <string name="about_me">About Me</string>
+    <string name="contact">Contact</string>
+    <string name="skillsetc">Skills &amp; Education</string>
+    <string name="ratings">Star Ratings</string>
+    <string name="samplereview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium bibendum sapien, ut euismod massa. Duis convallis sem sed turpis elementum auctor.</string>
+</resources>
