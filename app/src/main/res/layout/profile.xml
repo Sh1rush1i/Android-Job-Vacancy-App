@@ -222,6 +222,22 @@
                     android:backgroundTint="@color/bluelight"
                     android:text="Edit Profile"
                     />
+                <Button
+                    android:id="@+id/socmed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/green_sheen"
+                    android:text="Social Media"
+                    />
+                <Button
+                    android:id="@+id/connections"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/green_sheen"
+                    android:text="Connections"
+                    />
             </LinearLayout>
 
             <!--Option Bar-->

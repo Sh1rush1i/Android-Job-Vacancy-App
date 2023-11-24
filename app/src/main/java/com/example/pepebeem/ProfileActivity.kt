@@ -52,4 +52,19 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        val socmedbtn = findViewById<TextView>(R.id.socmed)
+        socmedbtn.setOnClickListener {
+            val intent = Intent(this, SocmedActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        val connectbtn = findViewById<TextView>(R.id.connections)
+        connectbtn.setOnClickListener {
+            val intent = Intent(this, ConnectionsActvity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }}
