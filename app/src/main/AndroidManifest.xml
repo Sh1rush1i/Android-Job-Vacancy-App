@@ -35,10 +35,6 @@
         <activity android:name=".WebViewActivity" />
         <activity android:name=".ConnectionsActvity" />
         <activity android:name=".Profile1Activity" />
-        <activity android:name=".Profile2Activity" />
-        <activity android:name=".Profile3Activity" />
-        <activity android:name=".Profile4Activity" />
-        <activity android:name=".Profile5Activity" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

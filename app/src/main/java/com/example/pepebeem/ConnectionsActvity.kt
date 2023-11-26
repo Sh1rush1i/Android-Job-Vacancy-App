@@ -63,40 +63,15 @@ class ConnectionsActvity  : AppCompatActivity() {
         val list = findViewById<ListView>(R.id.listview)
         list.adapter = listAdapter(this, namanama, fotofoto, desc)
         list.setOnItemClickListener { adapterView, view, position, id ->
+            val intent = Intent(this, Profile1Activity::class.java)
 
-            if (position==0){
-                // Handle action for position 1 (open web preview in WebViewActivity)
-                val intent = Intent(this, Profile1Activity::class.java)
-                startActivity(intent)
+            // Menyertakan data ekstra ke Intent
+            intent.putExtra("nama", namanama[position])
+            intent.putExtra("desc", desc[position])
+            intent.putExtra("foto", fotofoto[position])
 
-            }
-
-            if (position==1){
-                // Handle action for position 1 (open web preview in WebViewActivity)
-                val intent = Intent(this, Profile2Activity::class.java)
-                startActivity(intent)
-            }
-
-            if (position==2){
-                // Handle action for position 1 (open web preview in WebViewActivity)
-                val intent = Intent(this, Profile3Activity::class.java)
-
-                startActivity(intent)
-            }
-
-            if (position==3){
-                // Handle action for position 1 (open web preview in WebViewActivity)
-                val intent = Intent(this, Profile4Activity::class.java)
-                startActivity(intent)
-            }
-
-            if (position==4){
-                val intent = Intent(this, Profile5Activity::class.java)
-                startActivity(intent)
-            }
-
+            // Memulai aktivitas dengan Intent yang dikonfigurasi
+            startActivity(intent)
         }
-
     }
-
-    }
+}
