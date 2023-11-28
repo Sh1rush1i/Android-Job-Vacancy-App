@@ -14,7 +14,7 @@ import androidx.core.view.WindowCompat
 class ConnectionsActvity  : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.socmed)
+        setContentView(R.layout.connections)
 
         WindowCompat.setDecorFitsSystemWindows(
             window,false
@@ -59,6 +59,46 @@ class ConnectionsActvity  : AppCompatActivity() {
             R.drawable.elgato
         )
 
+        val fotofoto1 = arrayOf<Int>(
+            R.drawable.ic_notifications_white_24dp,
+            R.drawable.ic_notifications_white_24dp,
+            R.drawable.ic_notifications_white_24dp,
+            R.drawable.ic_notifications_white_24dp,
+            R.drawable.ic_notifications_white_24dp,
+
+        )
+
+        val noTelp = arrayOf<String>(
+            "+62 234789654",
+            "+62 908745634",
+            "+62 876785679",
+            "+62 476329874",
+            "+62 765904561"
+        )
+
+        val none1 = arrayOf<String>(
+            "",
+            "",
+            "",
+            "",
+            ""
+        )
+
+        val Deskripsi = arrayOf<String>(
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor ex volutpat consectetur efficitur. Fusce efficitur, erat pretium lacinia tincidunt, magna orci mattis orci, non porttitor diam justo sodales elit. Donec elementum quis quam at sagittis. Donec eu dolor rhoncus, rhoncus lectus a, ultricies quam. Curabitur pretium aliquam tortor ac dignissim. Nulla a orci scelerisque, finibus leo nec, suscipit enim. Duis vel tempus nunc, at mattis nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lacus vulputate, scelerisque tortor quis, volutpat odio.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor ex volutpat consectetur efficitur. Fusce efficitur, erat pretium lacinia tincidunt, magna orci mattis orci, non porttitor diam justo sodales elit. Donec elementum quis quam at sagittis. Donec eu dolor rhoncus, rhoncus lectus a, ultricies quam. Curabitur pretium aliquam tortor ac dignissim. Nulla a orci scelerisque, finibus leo nec, suscipit enim. Duis vel tempus nunc, at mattis nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lacus vulputate, scelerisque tortor quis, volutpat odio.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor ex volutpat consectetur efficitur. Fusce efficitur, erat pretium lacinia tincidunt, magna orci mattis orci, non porttitor diam justo sodales elit. Donec elementum quis quam at sagittis. Donec eu dolor rhoncus, rhoncus lectus a, ultricies quam. Curabitur pretium aliquam tortor ac dignissim. Nulla a orci scelerisque, finibus leo nec, suscipit enim. Duis vel tempus nunc, at mattis nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lacus vulputate, scelerisque tortor quis, volutpat odio.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor ex volutpat consectetur efficitur. Fusce efficitur, erat pretium lacinia tincidunt, magna orci mattis orci, non porttitor diam justo sodales elit. Donec elementum quis quam at sagittis. Donec eu dolor rhoncus, rhoncus lectus a, ultricies quam. Curabitur pretium aliquam tortor ac dignissim. Nulla a orci scelerisque, finibus leo nec, suscipit enim. Duis vel tempus nunc, at mattis nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lacus vulputate, scelerisque tortor quis, volutpat odio.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor ex volutpat consectetur efficitur. Fusce efficitur, erat pretium lacinia tincidunt, magna orci mattis orci, non porttitor diam justo sodales elit. Donec elementum quis quam at sagittis. Donec eu dolor rhoncus, rhoncus lectus a, ultricies quam. Curabitur pretium aliquam tortor ac dignissim. Nulla a orci scelerisque, finibus leo nec, suscipit enim. Duis vel tempus nunc, at mattis nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lacus vulputate, scelerisque tortor quis, volutpat odio."
+        )
+
+
+        val list1 = findViewById<ListView>(R.id.listview1)
+        list1.adapter = listAdapter(this, noTelp, fotofoto1 , none1 )
+        list1.setOnItemClickListener { adapterView, view, position, id ->
+
+        }
+
         // definisi list view
         val list = findViewById<ListView>(R.id.listview)
         list.adapter = listAdapter(this, namanama, fotofoto, desc)
@@ -69,6 +109,9 @@ class ConnectionsActvity  : AppCompatActivity() {
             intent.putExtra("nama", namanama[position])
             intent.putExtra("desc", desc[position])
             intent.putExtra("foto", fotofoto[position])
+            intent.putExtra("notelp", noTelp[position])
+            intent.putExtra("deskripsi", Deskripsi[position])
+
 
             // Memulai aktivitas dengan Intent yang dikonfigurasi
             startActivity(intent)

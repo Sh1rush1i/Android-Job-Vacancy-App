@@ -133,6 +133,27 @@
                         android:text="CEO of Meme Lord"
                         android:layout_gravity="center"
                         android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/noTelpView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:text="CEO of Meme Lord"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="32dp"/>
+
+                    <TextView
+                        android:id="@+id/deskripsiView"
+                        android:justificationMode="inter_word"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:text="CEO of Meme Lord"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="10dp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

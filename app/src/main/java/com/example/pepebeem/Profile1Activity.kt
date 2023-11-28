@@ -39,15 +39,21 @@ class Profile1Activity  : AppCompatActivity() {
         // Mengambil data ekstra dari Intent
         val nama = intent.getStringExtra("nama")
         val desc = intent.getStringExtra("desc")
+        val notelp = intent.getStringExtra("notelp")
+        val deskripsi = intent.getStringExtra("deskripsi")
         val fotoResId = intent.getIntExtra("foto", 0)
 
         // Menampilkan data di TextView dan ImageView
         val namaTextView = findViewById<TextView>(R.id.namaTextView)
         val descTextView = findViewById<TextView>(R.id.descTextView)
+        val notelpTextView = findViewById<TextView>(R.id.noTelpView)
+        val deskripsiTextView = findViewById<TextView>(R.id.deskripsiView)
         val fotoImageView = findViewById<CircleImageView>(R.id.profile_image)
 
         namaTextView.text = nama
         descTextView.text = desc
+        notelpTextView.text = notelp
+        deskripsiTextView.text = deskripsi
         fotoImageView.setImageResource(fotoResId)
     }
 }
