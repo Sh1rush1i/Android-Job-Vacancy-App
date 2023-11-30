@@ -1,16 +1,11 @@
 package com.example.pepebeem
 
-
 import android.app.Activity
-import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-
 
 class listAdapter (private val context: Activity,
                    private val title: Array<String>,
