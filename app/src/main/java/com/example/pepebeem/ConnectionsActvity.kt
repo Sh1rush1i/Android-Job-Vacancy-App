@@ -19,21 +19,18 @@ class ConnectionsActvity  : AppCompatActivity() {
         WindowCompat.setDecorFitsSystemWindows(
             window,false
         )
-
         val backBtn = findViewById<ImageView>(R.id.backBtn)
         backBtn.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
             finish()
         }
-
         val notificationbtn = findViewById<ImageView>(R.id.notificationbtn)
         notificationbtn.setOnClickListener {
             val intent = Intent(this, NotificationActivity::class.java)
             startActivity(intent)
             finish()
         }
-
         // siapin variable array yang mempunyai nilai
         val namanama = arrayOf<String>(
             "Freddy Fazbear",
@@ -42,7 +39,6 @@ class ConnectionsActvity  : AppCompatActivity() {
             "Bill",
             "El Gato"
             )
-
         val desc = arrayOf<String>(
             "CEO of Meme Lord",
             "Human Resource of Water Inc.",
@@ -50,7 +46,6 @@ class ConnectionsActvity  : AppCompatActivity() {
             "CEO of Mining Company",
             "Vet"
             )
-
         val fotofoto = arrayOf<Int>(
             R.drawable.fazbear,
             R.drawable.wilson,
@@ -58,16 +53,13 @@ class ConnectionsActvity  : AppCompatActivity() {
             R.drawable.bill,
             R.drawable.elgato
         )
-
         val fotofoto1 = arrayOf<Int>(
-            R.drawable.ic_notifications_white_24dp,
-            R.drawable.ic_notifications_white_24dp,
-            R.drawable.ic_notifications_white_24dp,
-            R.drawable.ic_notifications_white_24dp,
-            R.drawable.ic_notifications_white_24dp,
-
+            R.drawable.circularbordersolid,
+            R.drawable.circularbordersolid,
+            R.drawable.circularbordersolid,
+            R.drawable.circularbordersolid,
+            R.drawable.circularbordersolid
         )
-
         val noTelp = arrayOf<String>(
             "+62 234789654",
             "+62 908745634",
@@ -75,7 +67,6 @@ class ConnectionsActvity  : AppCompatActivity() {
             "+62 476329874",
             "+62 765904561"
         )
-
         val none1 = arrayOf<String>(
             "",
             "",
@@ -83,7 +74,6 @@ class ConnectionsActvity  : AppCompatActivity() {
             "",
             ""
         )
-
         val Deskripsi = arrayOf<String>(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor ex volutpat consectetur efficitur. Fusce efficitur, erat pretium lacinia tincidunt, magna orci mattis orci, non porttitor diam justo sodales elit. Donec elementum quis quam at sagittis. Donec eu dolor rhoncus, rhoncus lectus a, ultricies quam. Curabitur pretium aliquam tortor ac dignissim. Nulla a orci scelerisque, finibus leo nec, suscipit enim. Duis vel tempus nunc, at mattis nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lacus vulputate, scelerisque tortor quis, volutpat odio.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor ex volutpat consectetur efficitur. Fusce efficitur, erat pretium lacinia tincidunt, magna orci mattis orci, non porttitor diam justo sodales elit. Donec elementum quis quam at sagittis. Donec eu dolor rhoncus, rhoncus lectus a, ultricies quam. Curabitur pretium aliquam tortor ac dignissim. Nulla a orci scelerisque, finibus leo nec, suscipit enim. Duis vel tempus nunc, at mattis nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lacus vulputate, scelerisque tortor quis, volutpat odio.",
@@ -91,30 +81,33 @@ class ConnectionsActvity  : AppCompatActivity() {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor ex volutpat consectetur efficitur. Fusce efficitur, erat pretium lacinia tincidunt, magna orci mattis orci, non porttitor diam justo sodales elit. Donec elementum quis quam at sagittis. Donec eu dolor rhoncus, rhoncus lectus a, ultricies quam. Curabitur pretium aliquam tortor ac dignissim. Nulla a orci scelerisque, finibus leo nec, suscipit enim. Duis vel tempus nunc, at mattis nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lacus vulputate, scelerisque tortor quis, volutpat odio.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor ex volutpat consectetur efficitur. Fusce efficitur, erat pretium lacinia tincidunt, magna orci mattis orci, non porttitor diam justo sodales elit. Donec elementum quis quam at sagittis. Donec eu dolor rhoncus, rhoncus lectus a, ultricies quam. Curabitur pretium aliquam tortor ac dignissim. Nulla a orci scelerisque, finibus leo nec, suscipit enim. Duis vel tempus nunc, at mattis nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lacus vulputate, scelerisque tortor quis, volutpat odio."
         )
-
-
         val list1 = findViewById<ListView>(R.id.listview1)
         list1.adapter = listAdapter(this, noTelp, fotofoto1 , none1 )
         list1.setOnItemClickListener { adapterView, view, position, id ->
-
+            val clipboardText = desc.getOrNull(position) ?: ""
+            if (clipboardText.isNotEmpty()) {
+                copyToClipboard(clipboardText)
+                Toast.makeText(this, "Contact number copied to clipboard", Toast.LENGTH_SHORT).show()
+            }
         }
-
         // definisi list view
         val list = findViewById<ListView>(R.id.listview)
         list.adapter = listAdapter(this, namanama, fotofoto, desc)
         list.setOnItemClickListener { adapterView, view, position, id ->
             val intent = Intent(this, Profile1Activity::class.java)
-
             // Menyertakan data ekstra ke Intent
             intent.putExtra("nama", namanama[position])
             intent.putExtra("desc", desc[position])
             intent.putExtra("foto", fotofoto[position])
             intent.putExtra("notelp", noTelp[position])
             intent.putExtra("deskripsi", Deskripsi[position])
-
-
             // Memulai aktivitas dengan Intent yang dikonfigurasi
             startActivity(intent)
         }
+    }
+    private fun copyToClipboard(text: String) {
+        val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clipData = ClipData.newPlainText("Copied Text", text)
+        clipboardManager.setPrimaryClip(clipData)
     }
 }
