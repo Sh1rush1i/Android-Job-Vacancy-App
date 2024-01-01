@@ -25,16 +25,18 @@
         <activity android:name=".ProfileActivity"/>
         <activity android:name=".EditProfileActivity"/>
         <activity android:name=".PinActivity"/>
-        <activity android:name=".MenuActivity"/>
+        <activity android:name=".TabLayoutActivity"/>
         <activity android:name=".ReviewActivity"/>
         <activity android:name=".NotificationActivity"/>
-        <activity android:name=".JobActivity"/>
         <activity android:name=".ProfileExpActivity"/>
         <activity android:name=".ProfileReviewActivity"/>
         <activity android:name=".SocmedActivity"/>
         <activity android:name=".WebViewActivity" />
         <activity android:name=".ConnectionsActvity" />
         <activity android:name=".Profile1Activity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".JobDescActivity" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
 </manifest>

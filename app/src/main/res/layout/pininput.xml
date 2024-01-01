@@ -29,7 +29,7 @@
             app:backgroundColor="@color/blue"
             app:keyPadStyle="dark_border"
             app:marginTop="20dp"
-            app:pinEntry="four"
+            app:pinEntry="five"
             app:textColor="@color/white"
             android:layout_weight="1"/>
 

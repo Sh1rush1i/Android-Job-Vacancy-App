@@ -38,13 +38,16 @@ android {
 
 
 dependencies {
+    implementation ("androidx.viewpager2:viewpager2:1.0.0")
+    implementation ("com.ncorti:slidetoact:0.11.0")
+    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
     implementation("com.github.Karikari:GoodPinKeyPad:0.0.12")
-    implementation ("com.airbnb.android:lottie:6.1.0")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation ("com.airbnb.android:lottie:6.2.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
+    implementation ("androidx.core:core-ktx:1.8.0")
+    implementation ("androidx.appcompat:appcompat:1.5.0")
+    implementation("com.google.android.material:material:1.8.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

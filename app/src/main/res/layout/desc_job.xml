@@ -23,7 +23,7 @@
         android:padding="16dp"
         android:layout_marginTop="34dp">
         <ImageView
-            android:id="@+id/backEdit"
+            android:id="@+id/homeBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:padding="10dp"
@@ -104,9 +104,10 @@
                     app:cardCornerRadius="19dp"
                     android:background="@drawable/andro">
                     <ImageView
+                        android:id="@+id/jobImg"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/andro"></ImageView>
+                        android:scaleType="centerCrop"/>
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
@@ -180,10 +181,11 @@
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/deskripsiView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="@string/jobdesc"
+                            android:text="."
                             android:justificationMode="inter_word"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -215,8 +217,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1" />
-
-
                     </LinearLayout>
 
                     <LinearLayout
@@ -239,6 +239,7 @@
                                 android:src="@drawable/dollar" />
 
                             <TextView
+                                android:id="@+id/gajiView"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
@@ -250,20 +251,17 @@
 
                     </LinearLayout>
                 </LinearLayout>
-
-
-
             </LinearLayout>
-                <Button
-                    android:layout_marginTop="20dp"
-                    android:id="@+id/cancelEdit"
-                    android:layout_width="match_parent"
-                    android:layout_height="54dp"
-                    android:layout_marginBottom="34dp"
-                    android:backgroundTint="@color/bluelight"
-                    android:text="Apply For This Job"
-                    android:layout_weight="1"
-                    />
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/cancelEdit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginBottom="34dp"
+                android:backgroundTint="@color/bluelight"
+                android:text="Apply For This Job"
+                android:layout_weight="1"
+                />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

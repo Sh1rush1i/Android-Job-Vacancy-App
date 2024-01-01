@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.content.Intent
 import android.widget.TextView
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.WindowCompat
@@ -37,12 +36,12 @@ class LoginActivity : AppCompatActivity() {
             var textpass = isianpassword.text.toString()
 
             if(textuser == "" || textpass == ""){
-                Toast.makeText(this, "Username/password jangan kosong",
+                Toast.makeText(this, "Username/password must be filled",
                     Toast.LENGTH_LONG).show()
             }
             else{
                 val alertDialog = AlertDialog.Builder(this)
-                alertDialog.setTitle("Selamat Datang " + textuser)
+                alertDialog.setTitle("Welcome " + textuser)
                 alertDialog.setMessage("Loading")
 
                 alertDialog.setPositiveButton("Okay") { dialog, which ->

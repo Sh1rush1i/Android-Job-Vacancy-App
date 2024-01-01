@@ -3,9 +3,6 @@ package com.example.pepebeem
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
-import android.media.Image
-import android.widget.TextView
-import android.widget.Button
 import android.widget.ImageView
 import androidx.core.view.WindowCompat
 

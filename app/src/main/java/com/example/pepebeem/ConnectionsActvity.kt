@@ -7,9 +7,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.ListView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class ConnectionsActvity  : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,11 +84,10 @@ class ConnectionsActvity  : AppCompatActivity() {
         val list1 = findViewById<ListView>(R.id.listview1)
         list1.adapter = listAdapter(this, noTelp, fotofoto1 , none1 )
         list1.setOnItemClickListener { adapterView, view, position, id ->
-            val clipboardText = desc.getOrNull(position) ?: ""
-            if (clipboardText.isNotEmpty()) {
-                copyToClipboard(clipboardText)
-                Toast.makeText(this, "Contact number copied to clipboard", Toast.LENGTH_SHORT).show()
-            }
+            val dialog = BottomSheetDialog(this)
+            val view = layoutInflater.inflate(R.layout.bottomsheetview, null)
+            dialog.setContentView(view)
+            dialog.show()
         }
         // definisi list view
         val list = findViewById<ListView>(R.id.listview)

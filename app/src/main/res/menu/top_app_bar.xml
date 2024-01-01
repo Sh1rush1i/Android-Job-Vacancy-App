@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/star"
+        android:title=" Yes"
+        android:contentDescription="Tes"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search_icon"
+        android:title=" Search"
+        android:contentDescription="Tes"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/more"
+        android:title=" More"
+        android:contentDescription="Tes"
+        app:showAsAction="never"/>
+</menu>

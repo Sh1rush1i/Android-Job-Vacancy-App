@@ -25,8 +25,8 @@ class ProfileReviewActivity : AppCompatActivity() {
             finish()
         }
 
-        val backBtn = findViewById<ImageView>(R.id.backBtn)
-        backBtn.setOnClickListener {
+        val homeBtn = findViewById<ImageView>(R.id.homeBtn)
+        homeBtn.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
             finish()

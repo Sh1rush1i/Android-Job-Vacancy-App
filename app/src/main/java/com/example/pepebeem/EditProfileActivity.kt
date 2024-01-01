@@ -2,16 +2,13 @@ package com.example.pepebeem
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.content.Context
 import android.widget.Button
 import android.widget.Spinner
+import com.ncorti.slidetoact.SlideToActView
 
 
 class EditProfileActivity : AppCompatActivity() {
@@ -34,6 +31,16 @@ class EditProfileActivity : AppCompatActivity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             // Apply the adapter to the spinner
             spinner.adapter = adapter
+        }
+
+        val slide = findViewById<SlideToActView>(R.id.sliderbro)
+        slide.animDuration = 600
+        slide.bumpVibration = 500
+        slide.onSlideCompleteListener = object : SlideToActView.OnSlideCompleteListener {
+            override fun onSlideComplete(view: SlideToActView) {
+                val saveProfileButton: Button = findViewById(R.id.saveProfile)
+                saveProfileButton.isEnabled = true
+            }
         }
 
         val buttonBackEdit = findViewById<ImageView>(R.id.backEdit)

@@ -32,6 +32,13 @@ class Profile1Activity  : AppCompatActivity() {
             finish()
         }
 
+        val homeBtn = findViewById<ImageView>(R.id.homeBtn)
+        homeBtn.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         // Mengambil data ekstra dari Intent
         val nama = intent.getStringExtra("nama")
         val desc = intent.getStringExtra("desc")

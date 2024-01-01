@@ -88,38 +88,11 @@
             android:paddingTop="10dp"
             android:paddingRight="20dp">
 
-            <!--Top Profile Section -->
-
-            <!--Bootom Cards with sections-->
             <LinearLayout
                 android:id="@+id/personalinfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
-                <!--About Me Card-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/circularbordersolid"
-                    android:orientation="vertical"
-                    android:padding="28dp"
-                    android:elevation="4dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Notifications"
-                                android:fontFamily="@font/proximanovaregular"
-                                android:textSize="17sp"
-                                android:textStyle="bold" />
-                            <Space
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1" />
-
-                </LinearLayout>
-
-                <!--Contact Details-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -127,7 +100,8 @@
                     android:background="@drawable/circularbordersolid"
                     android:orientation="vertical"
                     android:padding="28dp"
-                    android:elevation="4dp">
+                    android:elevation="4dp"
+                    android:layout_marginBottom="8dp">
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

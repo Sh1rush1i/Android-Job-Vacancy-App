@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Relation"
+            style="?attr/materialButtonOutlinedStyle" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Friends"
+            style="?attr/materialButtonOutlinedStyle" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Family"
+            style="?attr/materialButtonOutlinedStyle" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+    <Button
+        android:id="@+id/fav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to Favourites"
+        app:icon="@drawable/star"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:backgroundTint="@color/yellowread"
+        android:elevation="8dp"
+        app:cornerRadius="20dp"
+        app:iconSize="23dp"
+        android:textAlignment="center"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/containedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chat Whatsapp"
+        app:icon="@drawable/niwangsaf"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:backgroundTint="@color/green"
+        android:elevation="8dp"
+        app:cornerRadius="20dp"
+        app:iconSize="30dp"
+        android:textAlignment="center"
+    />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/containedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call Whatsapp"
+        app:icon="@drawable/niwangsaf"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:backgroundTint="@color/green"
+        android:elevation="8dp"
+        app:cornerRadius="20dp"
+        app:iconSize="30dp"
+        android:textAlignment="center"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/containedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete contact"
+        app:icon="@drawable/noentry"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:backgroundTint="@color/red"
+        android:elevation="8dp"
+        app:cornerRadius="20dp"
+        app:iconSize="23dp"
+        android:textAlignment="center"
+        />
+</LinearLayout>
