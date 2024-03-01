@@ -1,6 +1,6 @@
 # PPBM - 03 - 7708213026 - Maula Syabil Haqq
 Multiple Pages UI Simple Design Vacancy Job App
-Multimedia mobile device programming | Assesment 1
+Multimedia mobile device programming | Final Assignment
 
 Maula Syabil Haqq | 7708213026 | 45-03
 
